@@ -1,0 +1,107 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  
+    li {
+      float: left;
+    }
+  
+    li a {
+      display: block;
+      padding: 8px;
+      background-color: #dddddd;
+    }
+    </style>
+</head>
+<body>
+
+<h1>Virtual EYE</h1>
+<ul>
+    <li><a href="index">Home</a></li>
+    <li><a href="login">Login</a></li>
+    <li><a href="register">Register</a></li>
+  </ul>
+  {% block content %}
+    <h4> {{prediction}}</h4>
+    <form action ="http://localhost:5000/result"method="get" >
+        <button type="submit">Predict</button>
+    </form>
+{% endblock %}
+</body>
+</html>
+ -->
+
+
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+  font-family: Georgia, serif;
+             }
+        th, td {
+        border: 1px solid white;
+        border-radius: 10px;
+        }
+    
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        color: white;
+        }
+        h1 {
+        color:  green;
+        }
+        a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <fieldset style="background-color: black">
+      <h1 align="center";>Virtual Eye</h1>
+          </fieldset>
+          <p align="right" colour:green>
+          <a href="index" >Home</a>&emsp;
+          <a href="logout">logout</a>&emsp;
+          </p>
+    <h1><u><center>Virtual Eye-Life Guard for Swimming Pools to Detect Active Drowning</center></u></h1>
+    <br>
+    <table style="width:100%">
+        <tr>
+          <th><p style="font-size:30px">Swimming is one of the best exercises that helps people to reduce stress in this urban lifestyle. Swimming pools are found larger in number in the hotels, weekend tourist spots and barely people have in their house backyard. Beginners, especially often feel it difficult to breathe under water and causes breathing trouble which in turn cause a drowning accident. Worldwide, drowning produces a higher rate of mortality without causing injury to children. Children under six of their age are found to be suffering the highest drowning mortality rates worldwide...Such kinds of deaths account for the third cause of unplanned death globally. with about 1.2 million cases yearly.</p></th>
+          <th><img src="{{url_for('static', filename='pics/avatar.jpg')}}" alt="A boy Drowning" width="600" height="400">
+          
+          
+    
+        </tr>
+      
+      </table>
+      <form action ="{{url_for('res')}}"method="get" >
+        <button type="submit">Predict</button>
+        <h4> {{prediction}}</h4>
+    </form>
+      <br><br>
+
+    <div class="footer">
+        <p>Copyright © 2021. All Rights Reserved </p>
+      </div>
+</body>
+</html>
