@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  
+    li {
+      float: left;
+    }
+  
+    li a {
+      display: block;
+      padding: 8px;
+      background-color: #dddddd;
+    }
+    </style>
+</head>
+<body>
+
+<h1>Virtual EYE</h1>
+<ul>
+    <li><a href="index">Home</a></li>
+    <li><a href="login">Login</a></li>
+    <li><a href="register">Register</a></li>
+  </ul>
+  {% block content %}
+    <h4> {{prediction}}</h4>
+    <form action ="http://localhost:5000/result"method="get" >
+        <button type="submit">Predict</button>
+    </form>
+{% endblock %}
+</body>
+</html>
+
