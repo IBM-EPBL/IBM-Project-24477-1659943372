@@ -1,0 +1,483 @@
+
+
+ <!DOCTYPE html>
+ <html >
+ 
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial- scale=1">
+ <title>Virtual Eye</title>
+ <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans+Conde nsed:300' rel='stylesheet' type='text/css'>
+ <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+  
+ <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+ <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+ <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+ 
+ 
+ 
+  
+ <style>
+ .header {
+ 
+     top:0; margin:0px; left: 0px; right: 0px;
+ position: fixed;
+ background-color: #070a64; color: white;
+ box-shadow: 0px 8px 4px rgb(6, 8, 145); overflow: hidden;
+ padding-left:20px;
+ font-family: 'Josefin Sans'; font-size: 2vw;
+ width: 100%; height:8%;
+ text-align: center;
+ 
+ }
+ .topnav {
+  
+ 
+ 
+ top:0; margin:0px; left: 0px; right: 0px;
+ position: fixed;
+ background-color: #060082; 
+ box-shadow: 0px 8px 4px grey; overflow: hidden;
+ padding-left:20px;
+ font-family: 'Josefin Sans'; font-size: 2vw;
+ width: 100%; height:8%;
+ text-align: center;
+  
+ overflow: hidden; background-color: #333;
+ }
+ 
+ .topnav-right a {
+  
+ float: left; color: #f2f2f2;
+ text-align: center; padding: 14px 16px; text-decoration: none; font-size: 18px;
+ }
+ 
+ .topnav-right a:hover { background-color: #ddd; color: black;
+ }
+ 
+ .topnav-right a.active { background-color: #565961; color: white;
+ }
+ 
+ .topnav-right { float: right;
+ padding-right:100px;
+ }
+ 
+ .login{
+ margin-top:-70px;
+ }
+ /* body {
+ 
+ background-color:#ffffff; background-repeat: no-repeat; background-size:cover; background-position: 0px 0px;
+ } */
+  
+ .login{
+ margin-top:100px;
+ }
+
+ 
+ input[type=text], input[type=email],input[type=number],input[type=password] { width: 100%;
+ padding: 12px 20px; display: inline-block; margin-bottom:18px; border: 1px solid black; box-sizing: border-box;
+ 
+
+ color: #000;
+ }
+ 
+ button {
+ background-color: #28272c; color: white;
+ padding: 14px 20px; margin-bottom:8px; border: none; cursor: pointer; width: 100%;
+ font-weight:bold;
+ }
+ 
+ button:hover { opacity: 0.8;
+ }
+ 
+ .cancelbtn { width: auto;
+  
+ padding: 10px 18px; background-color: #f44336;
+ }
+ 
+ /* .imgcontainer { text-align: center;
+ margin: 24px 0 12px 0;
+ } */
+/*  
+ img.avatar { width: 30%;
+ border-radius: 50%;
+ } */
+/*  
+ .container {    padding: 3em;
+        margin: 2em;
+        width: max-content;
+        height: max-content;
+        background-color: #23237fb3 ;
+        border-radius: 30px;
+    } */
+ 
+ 
+ /* span.psw { float: right;
+ padding-top: 16px; */
+ 
+ 
+ 
+ /* Change styles for span and cancel button on extra small screens
+ */
+ /* @media screen and (max-width: 300px) { span.psw {
+ display: block; float: none;
+ } */
+ .cancelbtn { width: 100%;
+  
+ }
+ 
+ 
+ /* delete here */
+   .container {
+    
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+
+}
+
+html {
+    background-image:url('https://www.eeweb.com/wp-content/uploads/projects-featured-projects-deployable-drowning-detection-system-1489370758.png');
+    background-repeat: no-repeat;
+     background-size:cover;
+height:80vh;
+    }
+
+.container-wrapper {
+    padding: 3em;
+    margin: 2em;
+    width: max-content;
+    height: max-content;
+    background-color: #23237fb3 ;
+    border-radius: 30px;
+}
+
+.login-text {
+    text-align: center;
+    font-size: 2em;
+    margin-top: -2%;
+}
+
+.item {
+    padding: 0.2em;
+}
+
+.container-wrapper label,
+button {
+    padding: 0.2em;
+}
+
+.submit {
+    text-align: center;
+   margin-top: 20px;
+}
+
+/* .submit button {
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 4.7em;
+    border: none;
+    width: 100%;
+    background-color: white;
+    font-size: 18px;
+}
+
+.submit button:hover {
+    background-color: #ff3449;
+    cursor: pointer;
+    box-shadow: #b5b6fb;
+
+} */
+
+
+
+form {
+    margin: 2em auto 2em auto
+}
+
+.input {
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.remember {
+    font-size: normal;
+    margin-left: 40%;
+    display: inline-block;
+    margin-top: 17px;
+}
+
+.ac {
+    display: inline-block;
+    font-size: medium;
+    margin-top: 24px;
+    text-align: center;
+}
+
+
+* {
+    font-family: 'Varela Round', sans-serif;
+    color:WHITE;
+}
+
+.ac a {
+    text-decoration: underline;
+    color: WHITE;
+}
+
+.ac-logo {
+    padding: 5px;
+    size: 20px;
+}
+
+#toc {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+.container h2 span {
+    background-color: black;
+    padding: 0 10px;
+}
+
+.social-mediaImg {
+    width: 48px;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .container-wrapper {
+        padding: 2em;
+        margin: 1em;
+    }
+
+    .login-text {
+        font-size: 1.5em;
+     
+    }
+
+    .item {
+        padding: 0.1em;
+        text-align: center;
+    }
+
+    .container-wrapper label,
+    button {
+        padding: 0.1em;
+    }
+
+    .submit {
+        margin-top: 1em;
+        margin-bottom: 2em;
+
+    }
+
+    /* .submit button {
+        padding: 0.5em 1em;
+        border-radius: 4.7em;
+        font-size: 14px;
+    } */
+
+
+
+    form {
+        margin: 1em auto 1em auto
+    }
+
+    .input {
+        padding: 10px;
+        border-radius: 15px;
+        font-size: 15px;
+
+    }
+
+    .remember {
+        font-size: smaller;
+        margin-left: 6em;
+    }
+
+    .ac {
+        font-size: small;
+    }
+
+    #toc {
+        font-size: small;
+    }
+
+    .social-mediaImg {
+        width: 40px;
+    }
+    .container h2 span {
+        font-size: medium;
+    }
+}
+
+
+
+/* SVG  */
+
+.icons8-google {
+    display: inline-block;
+    height: 48px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBmaWxsPSIjRkZDMTA3IiBkPSJNNDMuNjExLDIwLjA4M0g0MlYyMEgyNHY4aDExLjMwM2MtMS42NDksNC42NTctNi4wOCw4LTExLjMwMyw4Yy02LjYyNywwLTEyLTUuMzczLTEyLTEyYzAtNi42MjcsNS4zNzMtMTIsMTItMTJjMy4wNTksMCw1Ljg0MiwxLjE1NCw3Ljk2MSwzLjAzOWw1LjY1Ny01LjY1N0MzNC4wNDYsNi4wNTMsMjkuMjY4LDQsMjQsNEMxMi45NTUsNCw0LDEyLjk1NSw0LDI0YzAsMTEuMDQ1LDguOTU1LDIwLDIwLDIwYzExLjA0NSwwLDIwLTguOTU1LDIwLTIwQzQ0LDIyLjY1OSw0My44NjIsMjEuMzUsNDMuNjExLDIwLjA4M3oiPjwvcGF0aD48cGF0aCBmaWxsPSIjRkYzRDAwIiBkPSJNNi4zMDYsMTQuNjkxbDYuNTcxLDQuODE5QzE0LjY1NSwxNS4xMDgsMTguOTYxLDEyLDI0LDEyYzMuMDU5LDAsNS44NDIsMS4xNTQsNy45NjEsMy4wMzlsNS42NTctNS42NTdDMzQuMDQ2LDYuMDUzLDI5LjI2OCw0LDI0LDRDMTYuMzE4LDQsOS42NTYsOC4zMzcsNi4zMDYsMTQuNjkxeiI+PC9wYXRoPjxwYXRoIGZpbGw9IiM0Q0FGNTAiIGQ9Ik0yNCw0NGM1LjE2NiwwLDkuODYtMS45NzcsMTMuNDA5LTUuMTkybC02LjE5LTUuMjM4QzI5LjIxMSwzNS4wOTEsMjYuNzE1LDM2LDI0LDM2Yy01LjIwMiwwLTkuNjE5LTMuMzE3LTExLjI4My03Ljk0NmwtNi41MjIsNS4wMjVDOS41MDUsMzkuNTU2LDE2LjIyNyw0NCwyNCw0NHoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMTk3NkQyIiBkPSJNNDMuNjExLDIwLjA4M0g0MlYyMEgyNHY4aDExLjMwM2MtMC43OTIsMi4yMzctMi4yMzEsNC4xNjYtNC4wODcsNS41NzFjMC4wMDEtMC4wMDEsMC4wMDItMC4wMDEsMC4wMDMtMC4wMDJsNi4xOSw1LjIzOEMzNi45NzEsMzkuMjA1LDQ0LDM0LDQ0LDI0QzQ0LDIyLjY1OSw0My44NjIsMjEuMzUsNDMuNjExLDIwLjA4M3oiPjwvcGF0aD48L3N2Zz4=') 50% 50% no-repeat;
+    background-size: 100%;
+}
+
+
+.icons8-facebook-circled {
+    display: inline-block;
+    height: 48px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48bGluZWFyR3JhZGllbnQgaWQ9IkNYYW51d0Q5RUdrQmdUbjc2XzFteGFfcDYyQVNQSzJLcHFwX2dyMSIgeDE9IjkuOTkzIiB4Mj0iNDAuNjE1IiB5MT0iLTI5OS45OTMiIHkyPSItMzMwLjYxNSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIC0yOTApIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMmFhNGY0Ij48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA3YWQ5Ij48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI0NYYW51d0Q5RUdrQmdUbjc2XzFteGFfcDYyQVNQSzJLcHFwX2dyMSkiIGQ9Ik0yNCw0QzEyLjk1NCw0LDQsMTIuOTU0LDQsMjRjMCwxMC4wMjgsNy4zNzksMTguMzMxLDE3LjAwNCwxOS43NzcJQzIxLjk4MSw0My45MjQsMjIuOTgyLDQxLDI0LDQxYzAuOTE5LDAsMS44MjQsMi45MzgsMi43MTEsMi44MThDMzYuNDc1LDQyLjQ5NSw0NCwzNC4xMjcsNDQsMjRDNDQsMTIuOTU0LDM1LjA0Niw0LDI0LDR6Ij48L3BhdGg+PHBhdGggZD0iTTI3LjcwNywyMS4xNjljMC0xLjQyNCwwLjMwNS0zLjEyMSwxLjc1Ny0zLjEyMWg0LjI4M2wtMC4wMDEtNS42MTdsLTAuMDUtMC44NTJsLTAuODQ2LTAuMTE0CWMtMC42MDgtMC4wODItMS44NzMtMC4yNTMtNC4yMDYtMC4yNTNjLTUuNTY5LDAtOC42MzYsMy4zMTUtOC42MzYsOS4zMzR2Mi40OThIMTUuMDZ2Ny4yNThoNC45NDhWNDMuNglDMjEuMjk4LDQzLjg2MSwyMi42MzMsNDQsMjQsNDRjMS4yNjgsMCwyLjUwNC0wLjEzMSwzLjcwNy0wLjM1N1YzMC4zMDFoNS4wMzNsMS4xMjItNy4yNThoLTYuMTU1VjIxLjE2OXoiIG9wYWNpdHk9Ii4wNSI+PC9wYXRoPjxwYXRoIGQ9Ik0yNy4yMDcsMjEuMTY5YzAtMS4zNTMsMC4yOTMtMy42MjEsMi4yNTctMy42MjFoMy43ODNWMTIuNDZsLTAuMDI2LTAuNDRsLTAuNDMzLTAuMDU5CWMtMC41OTctMC4wODEtMS44MzgtMC4yNDktNC4xNDMtMC4yNDljLTUuMzIzLDAtOC4xMzYsMy4wNTUtOC4xMzYsOC44MzR2Mi45OThIMTUuNTZ2Ni4yNThoNC45NDh2MTMuODc0CUMyMS42NDQsNDMuODc2LDIyLjgwNiw0NCwyNCw0NGMxLjA5NCwwLDIuMTYtMC4xMTIsMy4yMDctMC4yODFWMjkuODAxaDUuMTA0bDAuOTY3LTYuMjU4aC02LjA3MlYyMS4xNjl6IiBvcGFjaXR5PSIuMDUiPjwvcGF0aD48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjYuNzA3LDI5LjMwMWg1LjE3NmwwLjgxMy01LjI1OGgtNS45ODl2LTIuODc0YzAtMi4xODQsMC43MTQtNC4xMjEsMi43NTctNC4xMjFoMy4yODNWMTIuNDYJYy0wLjU3Ny0wLjA3OC0xLjc5Ny0wLjI0OC00LjEwMi0wLjI0OGMtNC44MTQsMC03LjYzNiwyLjU0Mi03LjYzNiw4LjMzNHYzLjQ5OEgxNi4wNnY1LjI1OGg0Ljk0OHYxNC40NzUJQzIxLjk4OCw0My45MjMsMjIuOTgxLDQ0LDI0LDQ0YzAuOTIxLDAsMS44Mi0wLjA2MiwyLjcwNy0wLjE4MlYyOS4zMDF6Ij48L3BhdGg+PC9zdmc+') 50% 50% no-repeat;
+    background-size: 100%;
+}
+
+.icons8-twitter {
+    display: inline-block;
+    height: 48px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48bGluZWFyR3JhZGllbnQgaWQ9Il9vc245eklOMmY2UmhUc1k4V2hZNGFfNU1RMGdQQVlZeDdhX2dyMSIgeDE9IjEwLjM0MSIgeDI9IjQwLjc5OCIgeTE9IjguMzEyIiB5Mj0iMzguNzY5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMmFhNGY0Ij48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA3YWQ5Ij48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI19vc245eklOMmY2UmhUc1k4V2hZNGFfNU1RMGdQQVlZeDdhX2dyMSkiIGQ9Ik00Ni4xMDUsMTEuMDJjLTEuNTUxLDAuNjg3LTMuMjE5LDEuMTQ1LTQuOTc5LDEuMzYyYzEuNzg5LTEuMDYyLDMuMTY2LTIuNzU2LDMuODEyLTQuNzU4CWMtMS42NzQsMC45ODEtMy41MjksMS43MDItNS41MDIsMi4wODJDMzcuODYsOC4wMzYsMzUuNjEyLDcsMzMuMTIyLDdjLTQuNzgzLDAtOC42NjEsMy44NDMtOC42NjEsOC41ODIJYzAsMC42NzEsMC4wNzksMS4zMjQsMC4yMjYsMS45NThjLTcuMTk2LTAuMzYxLTEzLjU3OS0zLjc4Mi0xNy44NDktOC45NzRjLTAuNzUsMS4yNjktMS4xNzIsMi43NTQtMS4xNzIsNC4zMjIJYzAsMi45NzksMS41MjUsNS42MDIsMy44NTEsNy4xNDdjLTEuNDItMC4wNDMtMi43NTYtMC40MzgtMy45MjYtMS4wNzJjMCwwLjAyNiwwLDAuMDY0LDAsMC4xMDFjMCw0LjE2MywyLjk4Niw3LjYzLDYuOTQ0LDguNDE5CWMtMC43MjMsMC4xOTgtMS40ODgsMC4zMDgtMi4yNzYsMC4zMDhjLTAuNTU5LDAtMS4xMDQtMC4wNjMtMS42MzItMC4xNThjMS4xMDIsMy40MDIsNC4yOTksNS44ODksOC4wODcsNS45NjMJYy0yLjk2NCwyLjI5OC02LjY5NywzLjY3NC0xMC43NTYsMy42NzRjLTAuNzAxLDAtMS4zODctMC4wNC0yLjA2NS0wLjEyMkM3LjczLDM5LjU3NywxMi4yODMsNDEsMTcuMTcxLDQxCWMxNS45MjcsMCwyNC42NDEtMTMuMDc5LDI0LjY0MS0yNC40MjZjMC0wLjM3Mi0wLjAxMi0wLjc0Mi0wLjAyOS0xLjEwOEM0My40ODMsMTQuMjY1LDQ0Ljk0OCwxMi43NTEsNDYuMTA1LDExLjAyIj48L3BhdGg+PC9zdmc+') 50% 50% no-repeat;
+    background-size: 100%;}
+    #loader{
+  height: 2000px;
+  width: 2000px;
+  background: #69decb;
+  
+  position: fixed;
+  top : 100%;
+  left: 80%;
+  transform:
+  
+  translate(-50%, -50%) ;
+  z-index: 1000;
+   transition:all.5s ;
+  }
+
+#loader img
+{  position: center;
+  
+  top: 100%;
+  left: 80%;
+  transform:
+  translate(-50%, -50%) ;
+  background: #69decb;
+ 
+}
+
+.select{
+  padding: 3px 5px;
+  color: #000000;
+  background-color: aliceblue;
+  border: 1px solid #dddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.select:focus,
+.select:hover{
+  outline: none;
+  border: 1 px solid #b1aeae;
+}
+
+
+</style>
+
+ </head>
+ 
+ <body style="font-family:Montserrat;" opacity: 0.7;>
+ 
+ <div class="header">
+ <div style="width:50%;float:left;font-size:2vw;text-align:left;color:white; padding-top:1%">Virtual Eye - Drowning detection</div>
+ <div class="topnav-right" style="padding-top:0.5%;">
+ 
+ <a href="index">Home</a>
+     <a href="login">Login</a>
+     <a  href="register">Register</a>
+ 
+ </div>
+ </div>
+ <div id="login" class="login">
+ 
+ 
+ <form action="{{url_for('afterlogin')}}" method="post">
+ <!-- <div class="imgcontainer">
+ <img src="{{url_for('static', filename='pics/avatar.jpg')}}" alt="Avatar" class="avatar">
+ </div> -->
+ <div class="container">
+    <div class="container-wrapper">
+
+        <h3 class="login-text"><i class="bi bi-person-circle ac-logo"></i>Login</h3>
+    
+         <input type="email" placeholder="Enter registered email ID" name="email" value="{{ request.form['email'] }}"required><br>
+  
+ 
+ <input type="password" placeholder="Enter Password" name="password" value="{{ request.form['password'] }}" required>
+ <h1>{{message}}</h1>
+ <button type="submit">Login</button><br>
+        
+        </form>
+        <h2><span>OR</span></h2>
+     
+        <div class="social-media">
+
+            <a href="#"><div class="icons8-google social-mediaImg"></div></a> 
+            <a href="#"><div class="icons8-facebook-circled social-mediaImg"></div></a> 
+            <a href="#"><div class="icons8-twitter social-mediaImg"></div></a> 
+
+        </div>
+        <span class="ac">Don't have an Account? <a href="#">Sign Up</a></span>
+    </div>
+
+</div>
+ 
+ <div class="container">
+
+ 
+ </div>
+  
+ </form>
+ 
+ </div>
+ 
+ <div id="loader">
+    <img src="https://cdn.dribbble.com/users/1716464/screenshots/7087480/swimmer_loop_max.gif" width=155%>
+  </div>
+</div>
+<script type="text/javascript">
+
+var loader= document.getElementById("loader");
+window.resize(addEventListener("load",function(){
+
+
+  loader.style.height="1000px";
+  loader.style.width="1000px";
+  loader.style.borderRadius="50%";
+  loader.style.visibility="hidden";
+  
+
+})
+)
+
+</script>
+ 
+ </body>
+ </html>
+ 

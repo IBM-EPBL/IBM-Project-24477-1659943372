@@ -1,0 +1,173 @@
+
+
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <style>
+       body {
+  font-family: Arial;
+             }
+        th, td {
+        border: 1px solid rgb(241, 241, 241);
+        border-radius: 10px;
+        }
+    
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        color: white;
+        }
+        h1 {
+        color:  white;
+        }
+    
+        a:link {
+        color: rgb(0, 30, 136);
+        background-color: transparent;
+        text-decoration: none;
+        }
+     
+     
+
+  #loader{
+  height: 2000px;
+  width: 2000px;
+  background: #69decb;
+  
+  position: fixed;
+  top : 100%;
+  left: 80%;
+  transform:
+  
+  translate(-50%, -50%) ;
+  z-index: 1000;
+   transition:all.5s ;
+  }
+
+#loader img
+{  position: center;
+  
+  top: 100%;
+  left: 80%;
+  transform:
+  translate(-50%, -50%) ;
+  background: #69decb;
+ 
+}
+
+.select{
+  padding: 3px 5px;
+  color: #000000;
+  background-color: aliceblue;
+  border: 1px solid #dddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.select:focus,
+.select:hover{
+  outline: none;
+  border: 1 px solid #b1aeae;
+}
+button {
+        display: inline-block;
+        background-color: #7b38d8;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #f7c2f9;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+    </style>
+</head>
+<body>
+    
+    <fieldset style="background-color: darkblue">
+      <h1 align="center";>Virtual Eye - Drowning Detection</h1>
+          </fieldset>
+          <p align="right" colour:white>
+          <a href="index" >Home</a>&emsp;
+          <a href="logout">logout</a>&emsp;
+          </p>
+    <h1><u><center>Virtual Eye-Life Guard for Swimming Pools to Detect Active Drowning</center></u></h1>
+    <br>
+    <table style="width:100%">
+        <tr>
+          <th><p style="font-size:30px">Swimming is one of the best exercises that helps people to reduce stress in this urban lifestyle. Swimming pools are found larger in number in the hotels, weekend tourist spots and barely people have in their house backyard. Beginners, especially often feel it difficult to breathe under water and causes breathing trouble which in turn cause a drowning accident. Worldwide, drowning produces a higher rate of mortality without causing injury to children. Children under six of their age are found to be suffering the highest drowning mortality rates worldwide...Such kinds of deaths account for the third cause of unplanned death globally. with about 1.2 million cases yearly.</p></th>
+          <th><img src="{{url_for('static', filename='pics/page2.jpg')}}" alt="A boy Drowning" width="600" height="400">
+          
+          
+    
+        </tr>
+      
+      </table>
+      <form action ="{{url_for('res')}}"method="get" >
+        <button type="submit">Predict</button>
+        <h4> {{prediction}}</h4>
+    </form>
+      <br><br>
+
+    <div class="footer">
+        <p>Copyright © 2022. All Rights Reserved </p>
+      </div>
+      
+ <div id="loader">
+  <img src="https://cdn.dribbble.com/users/1716464/screenshots/7087480/swimmer_loop_max.gif" width=155%>
+</div>
+</div>
+<script type="text/javascript">
+
+var loader= document.getElementById("loader");
+window.resize(addEventListener("load",function(){
+
+
+loader.style.height="1000px";
+loader.style.width="1000px";
+loader.style.borderRadius="50%";
+loader.style.visibility="hidden";
+
+
+})
+)
+
+</script>
+   
+<img src="https://images.app.goo.gl/RgrRkVo6HPdFELZBA" alt="img">
+</body>
+</html>
